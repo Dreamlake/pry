@@ -8,7 +8,7 @@ class HomeController extends AppController {
 		//$x = $this->xval();
 		//$this->set('x', $x);
 		$this->set('title_for_layout', 'Vendomiauto.cl - Autos nuevos y usados a la venta.');
-
+		$this->layout('site');
 	}
 	
 	public function Prueba(){
