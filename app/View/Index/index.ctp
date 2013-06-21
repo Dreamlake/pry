@@ -1,64 +1,46 @@
-    <?php echo $this->element('menusite'); ?>
-    <div class="container-fluid">
-      <div class="row-fluid">
-        <div class="span3">
-        <form>
-	  		<fieldset>
-	    		<legend>Busque su auto ¡aquí!</legend>
-	    		<label>Ingrese el texto a buscar.</label>
-	    		<input type="text" placeholder="Ej: Toyota yaris 2010">
-	    		<span class="help-block">Opciones</span>
-	    		<label class="checkbox"><input type="checkbox">Nuevo</label>
-	    		<button type="submit" class="btn">Buscar</button>
-	  		</fieldset>
-		</form>
-        </div><!--/span-->
-        
-        <div class="span9">
-        	<div class="page-header">
-  				<h1>Avisos destacados <small>revisa estas oportunidades</small></h1>
-			</div>
-          <div class="row-fluid">
-            <ul class="thumbnails">
-  				<li class="span4">
-    			<div class="thumbnail">
-    				<?php echo $this->Html->image('avisos/test/01.jpg', array('alt' => '300x200', 'data-src' => 'holder.js/300x200')); ?>
-      				<img data-src="holder.js/300x200" alt="">
-      				<h4>Corsa sedán 2010</h4>
-      				<p>Vendo en excelente estado este chevrolet corsa con 23000km.</p>
-      				<p>
-      					<a href="#" class="btn btn-primary">Ver más</a>
-      				</p>
-    			</div>
-  				</li>
-			</ul>
-			<div class="page-header">
-  				<h1>Resultados <small>de tu búsqueda</small></h1>
-			</div>
-          <div class="row-fluid">
-            <div class="span4">
-              <h2>Heading</h2>
-              <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-              <p><a class="btn" href="#">View details &raquo;</a></p>
-            </div><!--/span-->
-            <div class="span4">
-              <h2>Heading</h2>
-              <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-              <p><a class="btn" href="#">View details &raquo;</a></p>
-            </div><!--/span-->
-            <div class="span4">
-              <h2>Heading</h2>
-              <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-              <p><a class="btn" href="#">View details &raquo;</a></p>
-            </div><!--/span-->
-          </div><!--/row-->
-        </div><!--/span-->
-      </div><!--/row-->
+<?php echo $this->element('menusite'); ?>
+<div class="container">
+
+      <!-- Main hero unit for a primary marketing message or call to action -->
+      <div class="hero-unit" style="background: url(img/fondo-body.jpg) no-repeat">
+        <h1>¡Bienvenidos!...</h1>
+        <br>
+        <p>A un nuevo concepto para buscar ese auto que tienes en mente, en solo simples pasos podras buscar el que más te guste.</p>
+        <!--<p><a href="#" class="btn btn-primary btn-large">Learn more &raquo;</a></p>-->
+      </div>
+
+      <!-- Example row of columns -->
+      <div class="row">
+        <div class="span4">
+          <h2>1. Publique su aviso</h2>
+          <p>Publique de forma fácil, el auto que desea vender.</p>
+          
+        </div>
+        <div class="span4">
+          <h2>2. Busque el auto que necesita</h2>
+          <p>Si busca un auto para comprar... ¡Este es su sitio!</p>
+          
+       </div>
+        <div class="span4">
+          <h2>3. Quiero integrar mi automotora</h2>
+          <p>Aumente sus ventas, incluya su automotora en nuestro sitio.</p>
+          
+        </div>
+        <div class="span4">
+        	<p><a class="btn btn-primary" href="/pry/index/crearAnuncio">¡Quiero publicar! &raquo;</a></p>
+        </div>
+        <div class="span4">
+        	<p><a class="btn btn-primary" href="/pry/index/search">¡Comenzar la búsqueda! &raquo;</a></p>
+        </div>
+        <div class="span4">
+        	<p><a class="btn btn-primary" href="#">¿Cómo lo hago? &raquo;</a></p>
+        </div>
+      </div>
 
       <hr>
+
       <footer>
-        <p align="center">&copy; compramiauto.cl - Todos los derechos reservados</p>
+        <p>&copy; Company 2013</p>
       </footer>
 
-    </div><!--/.fluid-container-->
-    
+    </div> <!-- /container -->
