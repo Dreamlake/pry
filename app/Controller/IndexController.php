@@ -23,6 +23,10 @@ class IndexController extends AppController {
 	
 	public function crearAnuncio()
 	{
+		$this->loadModel('Comuna');
+		$this->loadModel('Modelo');
+		$this->set('comunas', $this->Comuna->find('list'));
+		$this->set('modelos', $this->Modelo->find('list'));
 		$this->render('crearAnuncio', 'site');
 	}
 

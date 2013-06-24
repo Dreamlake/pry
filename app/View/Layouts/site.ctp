@@ -55,11 +55,7 @@
 		echo $this->fetch('meta');
 		echo $this->fetch('css');
 	?>
-</head>
-<body id="body">
-	<div id="divEspera" style="display:none;text-align: center;"><h3>Cargando...</h3></div>
-	<?php echo $this->fetch('content'); ?>
-	<?php
+	<?php 
 		echo $this->Html->script('../bootstrap/js/jquery');
 		echo $this->Html->script('../bootstrap/js/bootstrap-transition');
 		echo $this->Html->script('../bootstrap/js/bootstrap-alert');
@@ -75,6 +71,10 @@
 		echo $this->Html->script('../bootstrap/js/bootstrap-typeahead');
 		echo $this->fetch('script');
 	?>
+</head>
+<body id="body">
+	<div id="divEspera" style="display:none;text-align: center;"><h3>Cargando...</h3></div>
+	<?php echo $this->fetch('content'); ?>
 	<?php echo $this->Js->writeBuffer(); ?>
 </body>
 </html>
