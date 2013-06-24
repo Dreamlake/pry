@@ -40,7 +40,7 @@
       <hr>
 
       <footer>
-        <p>&copy; Company 2013</p>
+        <p align="center">&copy; compramiauto.cl - Todos los derechos reservados</p>
       </footer>
 
     </div> <!-- /container -->
