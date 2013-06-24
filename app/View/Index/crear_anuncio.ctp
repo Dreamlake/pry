@@ -2,7 +2,7 @@
 <div class="container">
 	<h2>Ingrese los datos para crear su anuncio</h2>
 	<?php
-			echo $this->Form->create('Anuncio', array('type' => 'file'));
+			echo $this->Form->create('Anuncio', array('type' => 'file', 'url' => array('controller' => 'index', 'action' => 'guardarAnuncio')));
 			?>
 			<fieldset>
 			<?php
@@ -14,6 +14,7 @@
 			echo $this->Form->input('Persona.PER_APE', array('label' => 'Apellidos', 'class' => 'input-xxlarge', 'type' => 'text'));
 			echo $this->Form->input('Persona.PER_RUT', array('label' => 'R.U.T.', 'class' => 'input-xxlarge', 'type' => 'text'));
 			echo $this->Form->input('Persona.PER_MAIL', array('label' => 'Correo electrónico', 'class' => 'input-xxlarge', 'type' => 'text'));
+			echo $this->Form->input('Persona.PER_TEL1', array('label' => 'Número de contacto', 'class' => 'input-xxlarge', 'type' => 'text'));
 			echo $this->Form->input('Anuncio.ANU_IMG_DIR', array('type' => 'hidden', 'value' => md5( date('Y-m-d h:i:s') )));
 			echo $this->Form->input('Interesado.IDO_CRN_FEC', array('type' => 'hidden', 'value' => date('Y-m-d h:i:s')));
 			echo $this->Form->input('img', array('type' => 'file', 'label' => 'Seleccione uan foto para su anuncio', 'class' => 'btn'));

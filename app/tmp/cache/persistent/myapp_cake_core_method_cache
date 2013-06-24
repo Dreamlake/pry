@@ -1,2 +1,2 @@
-1372039253
-a:2:{s:4:"name";a:10:{s:32:"49255deb3d5b1c65fa3dd2df52e88544";s:5:"`pry`";s:32:"6a02614b407d505a647c8fddf9507d4a";s:17:"`Comuna`.`COM_ID`";s:32:"171d5946ccc9b7a5f0f38c64ea815987";s:18:"`Comuna`.`COM_NOM`";s:32:"0ea53b6e3f5385f6c3382b7b02803bae";s:8:"`COMUNA`";s:32:"b4ba247ffcc88a186085c28bbd6eea51";s:8:"`Comuna`";s:32:"cc6a1898924212f96c76fbcdebaab4b6";s:17:"`Modelo`.`MOD_ID`";s:32:"e2b8f4458fb9a89831bdd031ff186a2e";s:18:"`Modelo`.`MOD_NOM`";s:32:"227b5a6b9e4a014f2d49a34458c8e776";s:8:"`modelo`";s:32:"76349b4487210f3d4a5b0ab3abcce6b4";s:8:"`Modelo`";s:32:"b2e142f6aad96671ae6bc40da7be4889";s:9:"`ANUNCIO`";}s:6:"fields";a:2:{s:32:"84a6bf66828652079251ad955db194b4";a:2:{i:0;s:17:"`Comuna`.`COM_ID`";i:1;s:18:"`Comuna`.`COM_NOM`";}s:32:"d683d1c346f087cfe2892ecd5d2f2bb8";a:2:{i:0;s:17:"`Modelo`.`MOD_ID`";i:1;s:18:"`Modelo`.`MOD_NOM`";}}}
+1372042579
+a:1:{s:4:"name";a:1:{s:32:"49255deb3d5b1c65fa3dd2df52e88544";s:5:"`pry`";}}
