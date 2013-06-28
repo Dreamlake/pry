@@ -6,46 +6,35 @@
 	  		<fieldset>
 	    		<legend>Busque su auto ¡aquí!</legend>
 	    		<label>Ingrese el texto a buscar.</label>
-	    		<input type="text" placeholder="Ej: Toyota yaris 2010">
-	    		<span class="help-block">Opciones</span>
-	    		<label class="checkbox"><input type="checkbox">Nuevo</label>
-	    		<button type="submit" class="btn">Buscar</button>
+	    		<input id="query" type="text" placeholder="Ej: Toyota yaris 2010">
+	    		<!--<span class="help-block">Opciones</span>
+	    		<label class="checkbox"><input type="checkbox">Nuevo</label>-->
+	    		<br>
+	    		<button id="buscar" type="submit" class="btn">Buscar</button>
+	    		<script>
+	    			$(document).ready(function(){
+	    				$("#loading").css("display", "inline");
+      						$("#busqueda").load("/pry/ajax/search", function(){
+         						$("#loading").css("display", "none");
+      						});
+	    				
+	    				
+   						$("#buscar").click(function(evento){
+      					evento.preventDefault();
+      					$("#loading").css("display", "inline");
+      					var x = $("#query").val();
+      						$("#busqueda").load("/pry/ajax/search/"+x, function(){
+         						$("#loading").css("display", "none");
+      						});
+   						});
+					});
+	    		</script>
 	  		</fieldset>
 		</form>
         </div><!--/span-->
         
-        <div class="span9">
-        	<div class="page-header">
-  				<h1>Avisos destacados <small>revisa estas oportunidades</small></h1>
-			</div>
-          <div class="row-fluid">
-          	
-            <ul class="thumbnails">
-            	<?php 
-            	foreach($destacados as $cont => $anuncio) { 
-            		//opendir('avisos/'.$anuncio['ANUNCIO']['ANU_IMG_DIR']);	
-            	?>
-  				<li class="span4">
-    			<div class="thumbnail" style="background-color: rgb(255, 252, 187)">
-    				<?php echo $this->Html->image('avisos/'.$anuncio['a']['ANU_IMG_DIR'].'/01.jpg', array('alt' => '300x200', 'data-src' => 'holder.js/300x200', 'style' => 'width: 300px; height: 200px;')); ?>
-      				<h4><?php echo $anuncio['mca']['MCA_NOM'] .' - '.$anuncio['m']['MOD_NOM']?></h4>
-      				<p>Precio: <?php echo $this->number->currency(intval( $anuncio['a']['ANU_MTO']), null, array('decimals' => ',', 'thousands' => '.','places' => 0)); ?></p>
-      				<p>
-      					<a href="#" class="btn btn-primary">Ver más</a>
-      				</p>
-    			</div>
-  				</li>
-  				
-  				<?php } ?>
-			</ul>
-			
-			<?php if(1==2) { ?>
-			<div class="page-header">
-  				<h1>Resultados <small>de tu búsqueda</small></h1>
-			</div>
-			<?php } ?>
-          
-        </div><!--/span-->
+        <div id="busqueda" class="span9">
+        	
       </div><!--/row-->
 
       <hr>

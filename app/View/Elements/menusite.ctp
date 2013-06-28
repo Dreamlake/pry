@@ -1,4 +1,4 @@
-	<div class="navbar navbar-inverse navbar-fixed-top">
+	<div class="navbar navbar-inverse navbar-fixed-top" align="center">
       <div class="navbar-inner">
         <div class="container-fluid">
           <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
@@ -40,4 +40,6 @@
           </div><!--/.nav-collapse -->
         </div>
       </div>
+      <div id="loading" class="container" style="display:none;"><?php echo $this->Html->image('ajax-loader.gif'); ?>&nbsp;&nbsp;Cargando datos, por favor espere...</div>
     </div>
+    
