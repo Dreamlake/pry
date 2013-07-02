@@ -2,11 +2,15 @@
   				<h1>Avisos destacados <small>revisa estas oportunidades</small></h1>
 			</div>
           <div class="row-fluid">
-          	
+          	<?php
+            	//debug(count($destacados)%3); 
+            	foreach($destacados as $row => $anuncioArray) { 
+            		//opendir('avisos/'.$anuncio['ANUNCIO']['ANU_IMG_DIR']);	
+            ?>
+            
             <ul class="thumbnails">
             	<?php 
-            	foreach($destacados as $cont => $anuncio) { 
-            		//opendir('avisos/'.$anuncio['ANUNCIO']['ANU_IMG_DIR']);	
+            	foreach($anuncioArray as $cont => $anuncio) { 
             	?>
   				<li class="span4">
     			<div class="thumbnail" style="background-color: rgb(255, 252, 187)">
@@ -18,10 +22,9 @@
       				</p>
     			</div>
   				</li>
-  				
   				<?php } ?>
 			</ul>
-			
+			<?php } ?>
 			<?php if(1==2) { ?>
 			<div class="page-header">
   				<h1>Resultados <small>de tu búsqueda</small></h1>

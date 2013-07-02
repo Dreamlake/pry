@@ -15,8 +15,24 @@ class AjaxController extends AppController {
 	{
 		$this->loadModel('Anuncio');
 		$destacados = $this->Anuncio->query("SELECT * FROM anuncio a INNER JOIN modelo m ON m.mod_id = a.mod_id INNER JOIN marca mca ON mca.mca_id = m.mca_id WHERE a.ANU_TIP = 2");
-		$this->set('destacados', $destacados);
-		sleep(1);
+		$cantDest = count($destacados);
+		//debug($destacados);
+		$contador = 0;
+		$pos = 0;
+		$destacadosOrdenados = array();
+		while($contador < $cantDest)
+		{
+			$destacadosOrdenados[$pos][] = $destacados[$contador];
+			$contador++;
+			if(count($destacadosOrdenados[$pos]) == 3)
+			{
+				$pos++;
+			}
+		}
+		//debug($destacadosOrdenados);
+		
+		$this->set('destacados', $destacadosOrdenados);
+		//sleep(1);
 		$this->render('search', 'site');
 	}
 

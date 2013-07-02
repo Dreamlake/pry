@@ -12,12 +12,16 @@ class IndexController extends AppController {
 		$this->render('index', 'site');
 	}
 	
-	public function search() 
+	public function search($msg = null) 
 	{
 		$this->loadModel('Anuncio');
 		$destacados = $this->Anuncio->query("SELECT * FROM anuncio a INNER JOIN modelo m ON m.mod_id = a.mod_id INNER JOIN marca mca ON mca.mca_id = m.mca_id WHERE a.ANU_TIP = 2");
 		$this->set('destacados', $destacados);
 		$this->set('title_for_layout', 'Compramiauto.cl - Autos nuevos y usados a la venta.');
+		if(!is_null($msg))
+		{
+			$this->set('msg', $msg);
+		}
 		$this->render('search', 'site');
 	}
 	
@@ -62,6 +66,8 @@ class IndexController extends AppController {
 		$this->Interesado->save($this->request->data);
 		$this->request->data['Persona']['IDO_ID'] = $this->Interesado->id;
 		$this->request->data['Anuncio']['IDO_ID'] = $this->Interesado->id;
+		$this->request->data['Anuncio']['ANU_TIP'] = 2;
+		
 		
 		$this->Persona->save($this->request->data);
 		
@@ -72,6 +78,7 @@ class IndexController extends AppController {
 		$this->Anuncio->save($this->request->data);
 		
 		$this->render('guardarAnuncio', 'site');
+		$this->redirect(array('controller' => 'index', 'action' => 'search', 'Saved'));
 	}
 
 }

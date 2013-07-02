@@ -1,4 +1,10 @@
     <?php echo $this->element('menusite'); ?>
+    <?php 
+    	if(isset($msg))
+    	{
+    		echo $this->element('success', array('msg' => 'Se ha creado el anuncio exitosamente.')); 
+    	}
+    ?>
     <div class="container-fluid">
       <div class="row-fluid">
         <div class="span3">
