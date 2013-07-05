@@ -18,8 +18,20 @@
       				<h4><?php echo $anuncio['mca']['MCA_NOM'] .' - '.$anuncio['m']['MOD_NOM']?></h4>
       				<p>Precio: <?php echo $this->number->currency(intval( $anuncio['a']['ANU_MTO']), null, array('decimals' => ',', 'thousands' => '.','places' => 0)); ?></p>
       				<p>
-      					<a href="#" class="btn btn-primary">Ver más</a>
+      					<button id="vm<?php echo $anuncio['a']['ANU_ID'] ?>" value="<?php echo $anuncio['a']['ANU_ID'] ?>" class="btn btn-primary">Ver más</button>
       				</p>
+      				<script>
+      				$(document).ready(function(){
+      					$('button[id^="vm"]').click(function(evento){
+      					evento.preventDefault();
+      					$("#loading").css("display", "inline");
+      					var x = $(this).val();
+      						$("#busqueda").load("/pry/ajax/anuncio/"+x, function(){
+         						$("#loading").css("display", "none");
+      						});
+   						});
+   					});
+      				</script>
     			</div>
   				</li>
   				<?php } ?>
