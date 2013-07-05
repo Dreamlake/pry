@@ -12,11 +12,11 @@
 	  		<fieldset>
 	    		<legend>Busque su auto ¡aquí!</legend>
 	    		<label>Ingrese el texto a buscar.</label>
-	    		<input id="query" type="text" placeholder="Ej: Toyota yaris 2010">
+	    		<input id="query" type="text" placeholder="Ej: Spark">
 	    		<!--<span class="help-block">Opciones</span>
 	    		<label class="checkbox"><input type="checkbox">Nuevo</label>-->
 	    		<br>
-	    		<button id="buscar" type="submit" class="btn">Buscar</button>
+	    		<button id="buscar" type="submit" class="btn btn-primary"><i class="icon-search icon-white"></i>  Buscar</button>
 	    		<script>
 	    			$(document).ready(function(){
 	    				$("#loading").css("display", "inline");

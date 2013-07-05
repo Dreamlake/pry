@@ -54,12 +54,14 @@ class AjaxController extends AppController {
 	
 	public function anuncio($id = null)
 	{
-		debug($id);
+		//debug($id);
 		$this->loadModel('Anuncio');
 		$anuncio = $this->Anuncio->query("
 			SELECT * FROM anuncio a 
 			INNER JOIN modelo m ON m.mod_id = a.mod_id 
 			INNER JOIN marca mca ON mca.mca_id = m.mca_id 
+			INNER JOIN interesado i ON i.ido_id = a.ido_id 
+			INNER JOIN persona p ON p.ido_id = i.ido_id
 			WHERE a.ANU_ID = $id
 			");
 		$this->set('anuncio', $anuncio);

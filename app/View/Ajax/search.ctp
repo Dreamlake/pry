@@ -18,7 +18,7 @@
       				<h4><?php echo $anuncio['mca']['MCA_NOM'] .' - '.$anuncio['m']['MOD_NOM']?></h4>
       				<p>Precio: <?php echo $this->number->currency(intval( $anuncio['a']['ANU_MTO']), null, array('decimals' => ',', 'thousands' => '.','places' => 0)); ?></p>
       				<p>
-      					<button id="vm<?php echo $anuncio['a']['ANU_ID'] ?>" value="<?php echo $anuncio['a']['ANU_ID'] ?>" class="btn btn-primary">Ver más</button>
+      					<button id="vm<?php echo $anuncio['a']['ANU_ID'] ?>" value="<?php echo $anuncio['a']['ANU_ID'] ?>" class="btn btn-primary"><i class="icon-th-list icon-white"></i>  Ver más</button>
       				</p>
       				<script>
       				$(document).ready(function(){

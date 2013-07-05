@@ -14,7 +14,7 @@
             </p>
             <?php } ?>
             <ul class="nav">
-              <li class="active"><a href="#">Inicio</a></li>
+              <li class="active"><a href="/pry/index/search">Inicio</a></li>
               <li><a href="#about">Nuestro proyecto</a></li>
               <li><a href="#contact">¡Contáctenos!</a></li>
               <!--
