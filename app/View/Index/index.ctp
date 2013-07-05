@@ -2,7 +2,7 @@
 <div class="container">
 
       <!-- Main hero unit for a primary marketing message or call to action -->
-      <div class="hero-unit" style="background: url(img/fondo-body.jpg) no-repeat">
+      <div class="hero-unit" style="background: url(img/fondo2.jpg) no-repeat">
         <h1>¡Bienvenidos!...</h1>
         <br>
         <p>A un nuevo concepto para buscar ese auto que tienes en mente, en solo simples pasos podras buscar el que más te guste.</p>

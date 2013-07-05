@@ -42,6 +42,6 @@
           </div><!--/.nav-collapse -->
         </div>
       </div>
-      <div id="loading" class="container" style="display:none;"><?php echo $this->Html->image('ajax-loader.gif'); ?>&nbsp;&nbsp;Cargando datos, por favor espere...</div>
+      <div id="loading" class="container" style="display:none;background-color: white;"><?php echo $this->Html->image('ajax-loader.gif'); ?>&nbsp;&nbsp;Cargando datos, por favor espere...</div>
     </div>
     

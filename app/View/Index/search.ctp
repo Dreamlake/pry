@@ -43,10 +43,10 @@
         	
       </div><!--/row-->
 
-      <hr>
-      <footer>
-        <p align="center">&copy; compramiauto.cl - Todos los derechos reservados</p>
-      </footer>
+      
 
     </div><!--/.fluid-container-->
-    
+    <hr>
+    <footer>
+        <p align="center">&copy; compramiauto.cl - Todos los derechos reservados</p>
+      </footer>
